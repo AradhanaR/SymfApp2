@@ -1,0 +1,17 @@
+myapp:
+    resource: "@myappBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: @AppBundle/Controller/
+    type:     annotation
+random:
+    path:     /random/{name}/{age}
+    defaults: { _controller: myappBundle:Default:index }
+
+photogalleria:
+    path:      /photogalleria/{page}
+    defaults:
+        _controller: myappBundle:Gallery:index
+        page:        1
+        title:       "Hello world!"

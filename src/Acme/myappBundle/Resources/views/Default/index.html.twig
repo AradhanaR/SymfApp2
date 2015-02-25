@@ -1,0 +1,12 @@
+ {# src/Acme/DemoBundle/Resources/views/Default/index.html.twig #}
+ {% extends '::base.html.twig' %}
+
+ {% block body %}
+ 	{{parent()}}
+
+ 	{% block column3 %}
+   		{{ age }} old {{ name | upper }} is visiting the page!
+   	{% endblock %}
+ {% endblock %}
+ 
+

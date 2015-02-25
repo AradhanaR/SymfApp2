@@ -1,2 +1,3 @@
-# SymfApp2
-testing
+Symfony Standard Edition
+========================
+Doctrine implementation.

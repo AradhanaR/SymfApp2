@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}Symfony Gallery{% endblock %}
+
+{% block body %}
+ {{parent()}}
+{% endblock %}
+
+{% block column3 %}
+{{parent()}}
+	<div id="gallery">
+		<ul>
+	
+		
+		  <li class="placeholder" style="background-image:url({{ asset('/public/layout/images/gallery-placeholder.gif')}}">Image Holder</li>
+		  {% for photo in  photoList %}
+
+		  	  {% set filepath  =  '/public/upload_gallery/' ~ photo.filename %}
+		  	  {% set imgpath  =  asset(filepath) %}
+			  <li><a class="swap" href="#"><img src="{{ imgpath}}" alt="" /><span><img src="{{ imgpath}}" width="950" height="370" alt="" /></span></a></li>
+
+		  {% endfor %}
+		</ul>
+	</div>
+{% endblock %}

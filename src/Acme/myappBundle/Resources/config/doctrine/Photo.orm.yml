@@ -1,0 +1,18 @@
+Acme\myappBundle\Entity\Photo:
+    type: entity
+    table: null
+    repositoryClass: Acme\myappBundle\Entity\PhotoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        filename:
+            type: string
+            length: 255
+        dtCreation:
+            type: datetime
+            column: dt_creation
+    lifecycleCallbacks: {  }
